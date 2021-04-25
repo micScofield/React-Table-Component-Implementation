@@ -1,0 +1,225 @@
+:root {
+  --primary-color: #17a2b8;
+  --dark-color: #343a40;
+  /* --light-color: #f4f4f4; */
+  --light-color: #e0e0e0;
+  --danger-color: #dc3545;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #000;
+  background-color: #b8c6db;
+  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+}
+
+.primary-color {
+  color: var(--primary-color);
+}
+
+.center {
+  text-align: center;
+}
+
+.container {
+  max-width: 95%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* text-size classes */
+.large {
+  font-size: 2rem;
+}
+.medium {
+  font-size: 1.5rem;
+}
+.small {
+  font-size: 0.5rem;
+}
+
+/* Margin Classes */
+.my-top-1 {
+  margin-top: 1rem;
+}
+
+.my-bottom-1 {
+  margin-bottom: 1rem;
+}
+
+.my-top {
+  margin-top: 0.5rem;
+}
+
+.my-bottom {
+  margin-bottom: 0.5rem;
+}
+
+/* Padding classes */
+.py-1 {
+  padding: 1rem 0;
+}
+
+.py-2 {
+  padding: 2rem 0;
+}
+
+.pxy-1 {
+  padding: 1rem;
+}
+
+/* button */
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  background-color: var(--light-color);
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+  color: #333;
+  outline: none;
+  border: none;
+  transition: opacity 0.2s ease-in;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-disabled {
+  cursor: not-allowed;
+}
+
+.btn-large {
+  padding: 0.5rem 1rem;
+  font-size: large;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.btn-light {
+  background: var(--light-color);
+  color: #333;
+}
+
+.btn-dark {
+  background: var(--dark-color);
+  color: #fff;
+}
+
+.btn-danger {
+  background: var(--danger-color);
+  color: #fff;
+}
+
+.btn-transparent {
+  background: transparent;
+  border: 0.5px solid #000;
+  border-radius: 50%;
+  padding: 0.6rem;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+  text-align: left;
+  overflow: hidden;
+}
+
+.table td {
+  position: relative;
+  border: 1px solid #fff;
+}
+
+.table th {
+  background: var(--primary-color);
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.1rem;
+  border: 1px solid #fff;
+}
+
+tbody tr {
+  background-color: #e0e0e0;
+}
+
+/* Use below to center a table */
+/* .table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* Brand / header style */
+.brand {
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 3px;
+  font-size: 2.5rem;
+}
+
+/* Styles for pagination and inputs */
+.page-navigation-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.goto-input {
+  max-width: 3rem;
+  padding: 0.5rem;
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+.center.my-top input {
+  margin-left: 0.5rem;
+}
+
+/* For column resizing */
+
+.resizer {
+  display: inline-block;
+  background: transparent;
+  width: 0.5rem;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(50%);
+  z-index: 1;
+}
+
+.resizer.isResizing {
+  background: var(--danger-color);
+}
+
+/* Smaller Screens */
+@media (max-width: 800px) {
+  .page-navigation-buttons {
+    flex-direction: column;
+  }
+
+  .btn-large {
+    padding: 0.5rem 0.5rem;
+    font-size: medium;
+  }
+}
